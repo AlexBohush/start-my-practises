@@ -59,9 +59,12 @@ console.log("------------------------");
 // task 4
 const randomNumber = Math.floor(Math.random() * 100);
 
-if (randomNumber < 20) {
+const lessNum = randomNumber < 20;
+const moreNum = randomNumber > 50;
+
+if (lessNum) {
     console.log(randomNumber, "randomNumber less than 20");
-} else if (randomNumber > 50) {
+} else if (moreNum) {
     console.log(randomNumber, "randomNumber more than 50");
 } else {
     console.log(randomNumber, "randomNumber less than 20 and more than 50");
@@ -70,8 +73,6 @@ if (randomNumber < 20) {
 console.log("------------------------");
 
 // task 5
-const lessNum = randomNumber < 20;
-const moreNum = randomNumber > 50;
 
 switch (true) {
     case lessNum:
