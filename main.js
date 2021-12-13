@@ -57,5 +57,21 @@ setInterval(() => {
     }
 }, 2000);
 
+document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') {
+        nextSlide();
+    } else if (e.key === 'ArrowLeft') {
+        prevSlide();
+    }
+})
+
+document.addEventListener('mousewheel', e => {
+    if (e.deltaY === -100) {
+        nextSlide();
+    } else if (e.deltaY === 100) {
+        prevSlide();
+    }
+})
+
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
